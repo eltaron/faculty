@@ -1,0 +1,9 @@
+body{overflow-x: hidden;}
+.mix {display: none;}
+.main_right {
+    width: 30%;
+    float: right;
+    margin-top: 12%;
+    text-align: right;
+    margin-right: 40px;
+}
