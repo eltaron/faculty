@@ -3,233 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery.flipster.min.css"/>
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <header style="background: url(img/main_back.jpg);background-size: cover;height: 760px;">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <button class="btn brown my-2 my-sm-0" type="submit">مقتبسات</button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav" style="margin: auto;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">اخر الانشطة</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            الاعوام الدراسية
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الكورسات</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60"></a>
-            </div>
-        </nav>
+    <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="btn brown my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#Quetes">مقتبسات</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" style="margin: auto;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اخر الانشطة</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                الاعوام الدراسية
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">الكورسات</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60"></a>
+                </div>
+            </nav>
             <div class="main_right">
-                <h1><span>كلية الهندسة</span> جامعة كفر الشيخ</h1>
+                <h1><span>كلية <span class="color">الهندسة</span> جامعة كفر الشيخ</h1>
                 <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
                 <div class="buttons">
-                    <button class="btn brown my-2 my-sm-0" type="submit">تسجيل الدخول</button>
-                    <button class="btn my-2 my-sm-0" type="submit">انشاء حساب</button>
+                    <button class="btn brown my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#login">تسجيل الدخول</button>
+                    <button class="btn main my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#sign">انشاء حساب</button>
                 </div>
         </div>
     </header>
-    <section class="section1">
+    <section class="section1 text-center">
         <h2>اخر الكورسات</h2>
         <ul class="shuffle">
-            <li class="select filter" data-filter="all">اخر الكورسات</li>
-            <li class="filter" data-filter=".elec">الكهربية</li>
-            <li class="filter" data-filter=".mech">الميكانيكيه</li>
             <li class="filter" data-filter=".civil">المدنية</li>
             <li class="filter" data-filter=".arch">المعمارية</li>
+            <li class="filter" data-filter=".elec">الكهربية</li>
+            <li class="filter" data-filter=".mech">الميكانيكيه</li>
+            <li class="select filter" data-filter="all">اخر الكورسات</li>
         </ul>
         <div id="container" class="gallery">
             <div class="row">
-                <div class="mix elec col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix elec col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix elec col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix mech col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="mix mech col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix mech col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix civil col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix civil col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="mix civil col-md-3">
-                    <img src="images/IMG-20200915-WA0004.jpg" alt="" class="height" />
-                    <h3>ID</h3>
-                </div>
-                <div class="mix arch col-md-3">
-                    <img src="images/IMG-20200915-WA0047.jpg" alt="" class="height" />
-                    <h3>Personal Cards</h3>
-                </div>
-                <div class="mix arch col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-                <div class="mix arch col-md-3">
-                    <img src="images/IMG-20200916-WA0004.jpg" alt="" class="height" />
-                    <h3>Logo Design</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section2">
-        <h2></h2>
-        <p></p>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-7">
-                        <h3></h3>
-                        <span></span>
-                    </div>
-                    <div class="overlay">
-                        <p></p>
+                <div class="mix elec col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec3.jpg" alt="" class="height" />
+                            <h3>الهندسة الكهربية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-7">
-                        <h3></h3>
-                        <span></span>
-                    </div>
-                    <div class="overlay">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-7">
-                        <h3></h3>
-                        <span></span>
-                    </div>
-                    <div class="overlay">
-                        <p></p>
+                <div class="mix arch col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec2.jpg" alt="" class="height" />
+                            <h3>الهندسة المعمارية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-7">
-                        <h3></h3>
-                        <span></span>
+                <div class="mix mech col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec4.jpg" alt="" class="height" />
+                            <h3>الهندسة الميكانيكية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
                     </div>
-                    <div class="overlay">
-                        <p></p>
+                </div>            
+                <div class="mix mech col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec4.jpg" alt="" class="height" />
+                            <h3>الهندسة الميكانيكية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix civil col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec1.jpg" alt="" class="height" />
+                            <h3>الهندسة المدنية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix civil col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec1.jpg" alt="" class="height" />
+                            <h3>الهندسة المدنية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix arch col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec2.jpg" alt="" class="height" />
+                            <h3>الهندسة المعمارية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix elec col-md-3 flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/sec3.jpg" alt="" class="height" />
+                            <h3>الهندسة الكهربية</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                            <button class="btn main my-2 my-sm-0" type="submit">مشاهدة الكورس</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section3">
+    <section class="section2 text-right">
+        <div class="container">
+            <h2>اخر الاخبار</h2>
+            <p class="main_P">لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5 order-md-2">
+                            <img src="img/img1.jpg">
+                        </div>
+                        <div class="col-md-7 order-md-1">
+                            <div class="main">
+                                <h3>احمد</h3>
+                                <span>مهندس</span>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5 order-md-2">
+                            <img src="img/img2.jpg">
+                        </div>
+                        <div class="col-md-7 order-md-1">
+                            <div class="main">
+                                <h3>عبد الرحمن</h3>
+                                <span>مهندس</span>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5 order-md-2">
+                            <img src="img/img3.jpg">
+                        </div>
+                        <div class="col-md-7 order-md-1">
+                            <div class="main">
+                                <h3>اية</h3>
+                                <span>مهندسه</span>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5 order-md-2">
+                            <img src="img/img4.jpg">
+                        </div>
+                        <div class="col-md-7 order-md-1">
+                            <div class="main">
+                                <h3>اية</h3>
+                                <span>مهندسه</span>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3 text-center">
         <h2>اخر الانشطة</h2>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+        <div id="coverflow">
+            <ul class="flip-items">
+                <li data-flip-title="Title 1" data-flip-category="Greens">
+                    <a href="#">
+                        <img src="img/sec1.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+                <li data-flip-title="Title 2" data-flip-category="Reds">
+                    <a href="#">
+                        <img src="img/sec2.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+                <li data-flip-title="Title 3" data-flip-category="Blacks">
+                    <a href="#">
+                        <img src="img/sec3.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+                <li data-flip-title="Title 1" data-flip-category="Greens">
+                    <a href="#">
+                        <img src="img/sec1.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+                <li data-flip-title="Title 2" data-flip-category="Reds">
+                    <a href="#">
+                        <img src="img/sec2.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+                <li data-flip-title="Title 3" data-flip-category="Blacks">
+                    <a href="#">
+                        <img src="img/sec3.jpg" width="500">
+                        <h4>اخر الانشطه</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>            
     </section>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="social_media">
                     <!-- Facebook -->
-                    <a class="fb-ic mr-md-5 mr-3">
-                        <i class="fas fa-facebook-f "> </i>
+                    <a class="fb-ic mr-md-5">
+                        <i class="fab fa-facebook-f "></i>
                     </a>
                     <!-- Twitter -->
-                    <a class="tw-ic mr-md-5 mr-3">
-                        <i class="fas fa-twitter "> </i>
+                    <a class="tw-ic mr-md-5">
+                        <i class="fab fa-twitter "></i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic mr-md-5 mr-3">
-                        <i class="fas fa-instagram "> </i>
+                    <a class="ins-ic mr-md-5">
+                        <i class="fab fa-instagram "></i>
                     </a>
                     <!--Pinterest-->
                     <a class="pin-ic">
-                        <i class="fas fa-pinterest "> </i>
+                        <i class="fab fa-pinterest "></i>
                     </a>
                 </div>
             </div>
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center">© 2020 Copyright:
-            <a href="#"> AH.com</a>
+            <a href="#">Ahmed Eltaroon</a>
         </div>
     </footer>
+    <div id="scroll-top">
+        <i class="fa fa-chevron-up"></i> 
+    </div> 
+    <!-- quetes -->
+    <section class="qutes">
+        <div class="modal fade" id="Quetes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Daily quotes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/s1.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s2.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s3.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s9.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s4.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s5.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s6.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="login text-right">
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">تسجيل الدخول</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>اسم المستخدم</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>كلمة المرور</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <button type="button" class="btn btn-orange">تسجيل الدخول</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sign text-right">
+        <div class="modal fade" id="sign" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">انشاء حساب</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>اسم المستخدم</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الالكتروني</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> رقم الهاتف</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>كلمة المرور</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>اعادة كلمة المرور</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-orange">انشاء حساب</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.flipster.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.mixitup.js"></script>
 <script src="js/index.js"></script>
+<script>
+    $(function(){
+        var coverflow = $("#coverflow").flipster();
+    });
+</script>
 </html>
