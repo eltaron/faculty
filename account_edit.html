@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="btn brown my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#Quetes">مقتبسات</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" style="margin: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">اخر الانشطة</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            الاعوام الدراسية
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الكورسات</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60"></a>
+            </div>
+        </nav>
+    </section>
+    <section class="section4">
+        <div class="container text-right">
+            <h2 class="text-center"><span>انشاء</span> حساب</h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>اسم المستخدم</label>
+                                <i class="fa fa-user"></i>
+                                <input type="text" class="form-control live" data-class=".live-title">
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الالكتروني</label>
+                                <input type="text" class="form-control live" data-class=".live-email">
+                            </div>
+                            <div class="form-group">
+                                <label> رقم الهاتف</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6 order-2">
+                                    <label>كلمة المرور</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>اعادة كلمة المرور</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4 order-3">
+                                    <label>الفرقة</label>
+                                    <select class="custom-select">
+                                        <option selected>اختر</option>
+                                        <option value="1">الاعدادية</option>
+                                        <option value="1">الاولى</option>
+                                        <option value="2">الثانية</option>
+                                        <option value="3">الثالثة</option>
+                                        <option value="1">الرابعة</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 order-2">
+                                    <label>الشعبة</label>
+                                    <select class="custom-select main_select">
+                                        <option selected>اختر</option>
+                                        <option value="1" data-show="0">عام</option>
+                                        <option value="1" data-show="1">الكهربية</option>
+                                        <option value="2" data-show="2">الميكانيكية</option>
+                                        <option value="3" data-show="0">المعمارية</option>
+                                        <option value="1" data-show="0">المدنية</option>
+                                        <option value="1" data-show="0">ميكاترونكس</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 order-1">
+                                    <label>التخصص</label>
+                                    <select class="custom-select">
+                                        <option selected>اختر</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="0">
+                                        <option selected>عام</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="1">
+                                        <option selected>اختر</option>
+                                        <option value="1">حاسبات ونظم تحكم</option>
+                                        <option value="1">القوي والألات الكهربية</option>
+                                        <option value="2">الاتصالات الكهربية والالكترونية</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="2">
+                                        <option selected>اختر</option>
+                                        <option value="1"> التصميم الميكانيكي وهندسة الانتاج</option>
+                                        <option value="1"> هندسة القوى الميكانيكيه</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-orange">انشاء حساب</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/img.png" class="img-thumbnail">
+                    <h3 class="live-title">الاسم</h3>
+                    <h4 class="live-email">user@domain.com</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="social_media">
+                    <!-- Facebook -->
+                    <a class="fb-ic mr-md-5">
+                        <i class="fab fa-facebook-f "></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic mr-md-5">
+                        <i class="fab fa-twitter "></i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic mr-md-5">
+                        <i class="fab fa-instagram "></i>
+                    </a>
+                    <!--Pinterest-->
+                    <a class="pin-ic">
+                        <i class="fab fa-pinterest "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center">© 2020 Copyright:
+            <a href="#">Ahmed Eltaroon</a>
+        </div>
+    </footer>
+    <!-- quetes -->
+    <section class="qutes">
+        <div class="modal fade" id="Quetes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Daily quotes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/s1.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s2.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s3.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s9.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s4.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s5.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s6.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.flipster.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mixitup.js"></script>
+<script src="js/index.js"></script>
+</html>

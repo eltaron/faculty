@@ -37,35 +37,62 @@ $second_color:  #b79b6d;
     font-weight: bold;
     margin-bottom: 25px;
 }
+@mixin navbar {
+    .brown {
+        @include brown;
+        padding: 11px 22px;
+    }
+    .navbar-nav {
+        padding-left: 40px;
+        .nav-link{
+            color: $main_color !important;
+            font-size: 19px;
+            opacity: 0.6;
+            margin-left: 12px;
+            &:hover{
+                opacity: 1;
+                border-bottom: 2px solid $second_color;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .active>.nav-link {
+            opacity: 1;
+            font-weight: bold;
+            border-bottom: 3px solid $second_color;
+        }
+    }
+    .dropdown-toggle::after{display: none;}
+}
+@mixin model_body {
+    padding: 20px;
+        border: 1px solid;
+        margin: 20px;
+        border-color:#c1b8b8;
+        label{color:$main_color;font-weight: 600;}
+        input {border-color:#c1b8b8;}
+        textarea{
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+            border-color:#c1b8b8;
+        }
+        .btn-orange{
+            background-color: $second_color;
+            border-radius: 30px;
+            color: $main_color;
+            &:hover{
+                color: $second_color;
+                background-color: $main_color;
+                transition: 0.5s ease-in-out;
+            }
+        }
+}
 header{
     background: url('../img/back.jpg');
     background-size: cover;
     height: 840px;
     .navbar{
-        .brown {
-            @include brown;
-            padding: 11px 22px;
-        }
-        .navbar-nav {
-            padding-left: 40px;
-            .nav-link{
-                color: $main_color !important;
-                font-size: 19px;
-                opacity: 0.6;
-                margin-left: 12px;
-                &:hover{
-                    opacity: 1;
-                    border-bottom: 2px solid $second_color;
-                    transition: 0.3s ease-in-out;
-                }
-            }
-            .active>.nav-link {
-                opacity: 1;
-                font-weight: bold;
-                border-bottom: 3px solid $second_color;
-            }
-        }
-        .dropdown-toggle::after{display: none;}
+        @include navbar;
     }
     .main_right {
         width: 30%;
@@ -281,27 +308,48 @@ footer{
 .login, .sign{
     h5{font-weight: bold;margin-left: 172px;color: $main_color;}
     .modal-body {
-        padding: 20px;
-        border: 1px solid;
-        margin: 20px;
-        border-color:#c1b8b8;
-        label{color:$main_color;font-weight: 600;}
-        input {border-color:#c1b8b8;}
-        textarea{
-            width: 100%;
-            height: 150px;
-            margin-bottom: 20px;
-            border-color:#c1b8b8;
+        @include model_body;
+    }
+}
+/*account_edit*/
+.header{
+    border-bottom: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+    .navbar{
+        @include navbar;
+        padding-bottom: 0;
+        .navbar-nav {
+            padding-left: 0;
         }
-        .btn-orange{
-            background-color: $second_color;
-            border-radius: 30px;
-            color: $main_color;
-            &:hover{
-                color: $second_color;
-                background-color: $main_color;
-                transition: 0.5s ease-in-out;
-            }
+        .brown {
+            box-shadow: 2px 3px 5px 0px #747070;
+        }
+        ul {
+            margin-bottom: 0;
+            li{line-height: 3;}
         }
     }
 }
+.section4{
+    h2{
+        font-weight: bold;
+        color: $main_color;
+        span{
+            border-bottom: 3px solid $second_color;
+            padding-bottom: 7px;
+            margin-left: 7px;
+        }
+    }
+    .modal-body {
+        @include model_body;
+        input{text-align: right;}
+        select {
+            text-align: center;
+            text-align-last: center;
+        }
+    }
+    .col-md-3{
+        img{margin-top: 20px;}
+    }
+}
+
