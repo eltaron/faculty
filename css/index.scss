@@ -49,8 +49,7 @@ $second_color:  #b79b6d;
             margin-left: 12px;
             &:hover{
                 opacity: 1;
-                border-bottom: 2px solid $second_color;
-                transition: 0.3s ease-in-out;
+                border-bottom: 3px solid $second_color;
             }
         }
         .active>.nav-link {
@@ -73,7 +72,6 @@ $second_color:  #b79b6d;
         outline: 0;
         box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
     }
-
     textarea{
         width: 100%;
         height: 150px;
@@ -108,12 +106,15 @@ body{overflow-x: hidden;}
     font-size: 18px;
     color: $main_color;
 }
-.btn:focus {
+.btn:focus{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
 }
 .custom-file-input:lang(en)~.custom-file-label::after {
     content: "البحث";
+}
+hr {
+    border-top: 2px solid rgba(0,0,0,.1);
 }
 .custom-file-label::after{left: 0;right: 350px;border-radius: 0;}
 header{
@@ -398,4 +399,108 @@ footer{
         display: block;
         margin-bottom: 10px;
     }
+}
+/*activity*/
+.section6{
+    .main_content{
+        h2{
+            @include main_h2;
+            span{border-bottom: 3px solid $second_color;padding-bottom: 8px;}
+        }
+        .main_item{
+            border: 1px solid;
+            border-color: #c1b8b8;
+            padding: 16px 10px 20px;
+            border-radius: 5px;
+            background-color: #f5f6ef;
+            box-shadow: 0px 0px 1px 0px #000;
+            margin-bottom: 30px;
+            h3{@include main_h2; text-align: center;}
+            p{color: $second_color;}
+            .data_span{
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #807a79;
+            }
+            .main_img{
+                height: 450px;
+                width: 100%;
+                display: block;
+            }
+            .second_row{
+                h5{
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+                    font-weight: bold;
+                    color: $main_color;
+                    span{
+                        background-color: $main_color;
+                        padding: 3px 10px 9px;
+                        border-radius: 30px;
+                        box-shadow: 0 0 1px 0 #000;
+                        font-weight: 600;
+                        color: $second_color;
+                    }
+                    i{
+                        margin-left: 7px;
+                        color: $second_color;
+                    }
+                }
+            }
+            .main {
+                @include main;
+                padding: 8px 15px;
+                width: 150px;
+                background-color: $second_color;
+                border: none;
+                box-shadow: 0 0 1px 0 #000;
+            }
+            .comment_show,.add_comment{
+                display: none;
+                margin: 20px 0;
+                padding: 10px 25px;
+                border-radius: 10px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                    0 1px 2px rgba(0, 0, 0, 0.24);
+                background-color: #fff;
+                img{
+                    width: 85%;
+                    border-radius: 50%;
+                    margin: auto;
+                    display: block;
+                    margin-top: 19px;
+                    height: 80px;
+                }
+                .btn-orange{
+                    background-color: $second_color;
+                    border-radius: 30px;
+                    color: $main_color;
+                    font-weight: bold;
+                    padding: 8px 15px;
+                    width: 130px;
+                    &:hover{
+                        color: $second_color;
+                        background-color: $main_color;
+                        transition: 0.5s ease-in-out;
+                    }
+                }
+                label{
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    color: $main_color;
+                }
+                i{
+                    margin-left: 7px;
+                    color: $second_color;
+                    font-size: 21px;
+                }
+                textarea{text-align: right;}
+            }
+        }
+    }
+    
 }

@@ -33,6 +33,10 @@ body {
   content: "البحث";
 }
 
+hr {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
 .custom-file-label::after {
   left: 0;
   right: 350px;
@@ -71,8 +75,7 @@ header .navbar .navbar-nav .nav-link {
 }
 header .navbar .navbar-nav .nav-link:hover {
   opacity: 1;
-  border-bottom: 2px solid #b79b6d;
-  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid #b79b6d;
 }
 header .navbar .navbar-nav .active > .nav-link {
   opacity: 1;
@@ -435,8 +438,7 @@ footer .footer-copyright a {
 }
 .header .navbar .navbar-nav .nav-link:hover {
   opacity: 1;
-  border-bottom: 2px solid #b79b6d;
-  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid #b79b6d;
 }
 .header .navbar .navbar-nav .active > .nav-link {
   opacity: 1;
@@ -545,6 +547,129 @@ footer .footer-copyright a {
   margin: auto;
   display: block;
   margin-bottom: 10px;
+}
+
+/*activity*/
+.section6 .main_content h2 {
+  color: #3f3332;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.section6 .main_content h2 span {
+  border-bottom: 3px solid #b79b6d;
+  padding-bottom: 8px;
+}
+.section6 .main_content .main_item {
+  border: 1px solid;
+  border-color: #c1b8b8;
+  padding: 16px 10px 20px;
+  border-radius: 5px;
+  background-color: #f5f6ef;
+  box-shadow: 0px 0px 1px 0px #000;
+  margin-bottom: 30px;
+}
+.section6 .main_content .main_item h3 {
+  color: #3f3332;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.section6 .main_content .main_item p {
+  color: #b79b6d;
+}
+.section6 .main_content .main_item .data_span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #807a79;
+}
+.section6 .main_content .main_item .main_img {
+  height: 450px;
+  width: 100%;
+  display: block;
+}
+.section6 .main_content .main_item .second_row h5 {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #3f3332;
+}
+.section6 .main_content .main_item .second_row h5 span {
+  background-color: #3f3332;
+  padding: 3px 10px 9px;
+  border-radius: 30px;
+  box-shadow: 0 0 1px 0 #000;
+  font-weight: 600;
+  color: #b79b6d;
+}
+.section6 .main_content .main_item .second_row h5 i {
+  margin-left: 7px;
+  color: #b79b6d;
+}
+.section6 .main_content .main_item .main {
+  color: #3f3332;
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid;
+  margin-left: 10px;
+  padding: 8px 15px;
+  width: 150px;
+  background-color: #b79b6d;
+  border: none;
+  box-shadow: 0 0 1px 0 #000;
+}
+.section6 .main_content .main_item .main:hover {
+  border-color: #3f3332;
+  color: #b79b6d;
+  background-color: #3f3332;
+  transition: 0.7s ease-in-out;
+}
+.section6 .main_content .main_item .comment_show, .section6 .main_content .main_item .add_comment {
+  display: none;
+  margin: 20px 0;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+}
+.section6 .main_content .main_item .comment_show img, .section6 .main_content .main_item .add_comment img {
+  width: 85%;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  margin-top: 19px;
+  height: 80px;
+}
+.section6 .main_content .main_item .comment_show .btn-orange, .section6 .main_content .main_item .add_comment .btn-orange {
+  background-color: #b79b6d;
+  border-radius: 30px;
+  color: #3f3332;
+  font-weight: bold;
+  padding: 8px 15px;
+  width: 130px;
+}
+.section6 .main_content .main_item .comment_show .btn-orange:hover, .section6 .main_content .main_item .add_comment .btn-orange:hover {
+  color: #b79b6d;
+  background-color: #3f3332;
+  transition: 0.5s ease-in-out;
+}
+.section6 .main_content .main_item .comment_show label, .section6 .main_content .main_item .add_comment label {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3f3332;
+}
+.section6 .main_content .main_item .comment_show i, .section6 .main_content .main_item .add_comment i {
+  margin-left: 7px;
+  color: #b79b6d;
+  font-size: 21px;
+}
+.section6 .main_content .main_item .comment_show textarea, .section6 .main_content .main_item .add_comment textarea {
+  text-align: right;
 }
 
 /*# sourceMappingURL=index.css.map */

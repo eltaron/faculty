@@ -72,3 +72,11 @@ $('.username_login').blur(function () {
 $('.password_login').blur(function () {
     validte($('.password_login'), 6); 
 });
+$('.comment').blur(function () {
+    validte($('.comment'), 8); 
+});
+//show items
+$('.show_btn').on('click', function(){
+    $selected = $(this).data('show_item');
+    $(this).parent().nextAll("#"+ $selected).fadeIn().siblings('.show_item').fadeOut();
+});
