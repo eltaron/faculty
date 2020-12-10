@@ -1,9 +1,42 @@
+@charset "UTF-8";
 body {
   overflow-x: hidden;
 }
 
 .mix {
   display: none;
+}
+
+.asterisk {
+  float: left;
+  position: relative;
+  left: 13px;
+  top: 38px;
+  color: #f00;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.fa-eye {
+  position: relative;
+  top: 40px;
+  font-size: 18px;
+  color: #3f3332;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "البحث";
+}
+
+.custom-file-label::after {
+  left: 0;
+  right: 350px;
+  border-radius: 0;
 }
 
 header {
@@ -337,8 +370,18 @@ footer .footer-copyright a {
   color: #3f3332;
   font-weight: 600;
 }
+.login .modal-body i, .sign .modal-body i {
+  font-size: 16px;
+  margin-left: 6px;
+  color: #b79b6d;
+}
 .login .modal-body input, .sign .modal-body input {
   border-color: #c1b8b8;
+  text-align: right;
+}
+.login .modal-body input:focus, .sign .modal-body input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
 }
 .login .modal-body textarea, .sign .modal-body textarea {
   width: 100%;
@@ -406,8 +449,23 @@ footer .footer-copyright a {
 .header .navbar .navbar-nav {
   padding-left: 0;
 }
-.header .navbar .brown {
-  box-shadow: 2px 3px 5px 0px #747070;
+.header .navbar .main {
+  color: #3f3332;
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 3px solid;
+  margin-left: 10px;
+  padding: 6px 0;
+  width: 122px;
+  font-size: 16px;
+}
+.header .navbar .main:hover {
+  border-color: #3f3332;
+  color: #b79b6d;
+  background-color: #3f3332;
+  transition: 0.7s ease-in-out;
 }
 .header .navbar ul {
   margin-bottom: 0;
@@ -435,8 +493,18 @@ footer .footer-copyright a {
   color: #3f3332;
   font-weight: 600;
 }
+.section4 .modal-body i {
+  font-size: 16px;
+  margin-left: 6px;
+  color: #b79b6d;
+}
 .section4 .modal-body input {
   border-color: #c1b8b8;
+  text-align: right;
+}
+.section4 .modal-body input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
 }
 .section4 .modal-body textarea {
   width: 100%;
@@ -454,15 +522,29 @@ footer .footer-copyright a {
   background-color: #3f3332;
   transition: 0.5s ease-in-out;
 }
-.section4 .modal-body input {
-  text-align: right;
-}
 .section4 .modal-body select {
   text-align: center;
   text-align-last: center;
 }
+.section4 .col-md-3 {
+  border: 1px solid;
+  border-color: #c1b8b8;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 .section4 .col-md-3 img {
   margin-top: 20px;
+}
+.section4 .col-md-3 h3, .section4 .col-md-3 h4 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #3f3332;
+}
+
+.section5 img {
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

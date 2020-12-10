@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="btn main my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#Quetes">مقتبسات</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" style="margin: auto;margin-bottom: 0;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">اخر الانشطة</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            الاعوام الدراسية
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الكورسات</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60"></a>
+            </div>
+        </nav>
+    </section>
+    <section class="section4 section5">
+        <div class="container text-right">
+            <h2 class="text-center"><span>بيانات</span> الحساب</h2>
+            <div class="modal-body">
+                <img src="img/img.png" class="img-thumbnail">
+                <form>
+                    <div class="form-group">
+                        <label>اسم المستخدم</label>
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control" placeholder="احمد محمد جمعة الطارون " readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الالكتروني</label>
+                        <i class="fas fa-at"></i>
+                        <input type="text" class="form-control" placeholder="ahmed@gmail.com" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label> رقم الهاتف</label>
+                        <i class="fas fa-mobile-alt"></i>
+                        <input type="text" class="form-control phone" placeholder="01066343874 " readonly>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 order-3">
+                            <label>الفرقة</label>
+                            <i class="fas fa-users"></i>
+                            <select class="custom-select">
+                                <option selected>الاولى</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 order-2">
+                            <label>الشعبة</label>
+                            <i class="fas fa-user-friends"></i>
+                            <select class="custom-select main_select">
+                                <option selected>الكهربية</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 order-1">
+                            <label>التخصص</label>
+                            <i class="fas fa-layer-group"></i>
+                            <select class="custom-select">
+                                <option selected>عام</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#sign">تعديل الحساب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="social_media">
+                    <!-- Facebook -->
+                    <a class="fb-ic mr-md-5">
+                        <i class="fab fa-facebook-f "></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic mr-md-5">
+                        <i class="fab fa-twitter "></i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic mr-md-5">
+                        <i class="fab fa-instagram "></i>
+                    </a>
+                    <!--Pinterest-->
+                    <a class="pin-ic">
+                        <i class="fab fa-pinterest "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center">© 2020 Copyright:
+            <a href="#">Ahmed Eltaroon</a>
+        </div>
+    </footer>
+    <!-- quetes -->
+    <section class="qutes">
+        <div class="modal fade" id="Quetes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Daily quotes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/s1.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s2.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s3.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s9.png" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s4.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s5.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/s6.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sign text-right">
+        <div class="modal fade" id="sign" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">تعديل الحساب</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>اسم المستخدم</label>
+                                <i class="fa fa-user"></i>
+                                <input type="text" class="form-control live username" placeholder="احمد محمد جمعة الطارون " data-class=".live-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الالكتروني</label>
+                                <i class="fas fa-at"></i>
+                                <input type="text" class="form-control live email" placeholder="ahmed@gmail.com"  data-class=".live-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label> رقم الهاتف</label>
+                                <i class="fas fa-mobile-alt"></i>
+                                <input type="text" class="form-control phone" placeholder="01066343874 ">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-1"><i class="far fa-eye show-pass"></i></div>
+                                    <div class="col-md-11">
+                                        <label>كلمة المرور</label>
+                                        <i class="fas fa-unlock-alt"></i>
+                                        <input type="password" class="form-control showpass password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-1"><i class="far fa-eye show-pass-2"></i></div>
+                                    <div class="col-md-11">
+                                        <label>اعادة كلمة المرور</label>
+                                        <i class="fa fa-redo-alt"></i>
+                                        <input type="password" class="form-control showpass-2 password2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4 order-3">
+                                    <label>الفرقة</label>
+                                    <i class="fas fa-users"></i>
+                                    <select class="custom-select">
+                                        <option value="1">الاعدادية</option>
+                                        <option value="1" selected>الاولى</option>
+                                        <option value="2">الثانية</option>
+                                        <option value="3">الثالثة</option>
+                                        <option value="1">الرابعة</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 order-2">
+                                    <label>الشعبة</label>
+                                    <i class="fas fa-user-friends"></i>
+                                    <select class="custom-select main_select">
+                                        <option value="1" data-show="0">عام</option>
+                                        <option value="1" data-show="1" selected>الكهربية</option>
+                                        <option value="2" data-show="2">الميكانيكية</option>
+                                        <option value="3" data-show="0">المعمارية</option>
+                                        <option value="1" data-show="0">المدنية</option>
+                                        <option value="1" data-show="0">ميكاترونكس</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4 order-1">
+                                    <label>التخصص</label>
+                                    <i class="fas fa-layer-group"></i>
+                                    <select class="custom-select">
+                                        <option selected>عام</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="0">
+                                        <option selected>عام</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="1">
+                                        <option selected>اختر</option>
+                                        <option value="1">حاسبات ونظم تحكم</option>
+                                        <option value="1">القوي والألات الكهربية</option>
+                                        <option value="2">الاتصالات الكهربية والالكترونية</option>
+                                    </select>
+                                    <select class="custom-select" style="display: none;" id="2">
+                                        <option selected>اختر</option>
+                                        <option value="1"> التصميم الميكانيكي وهندسة الانتاج</option>
+                                        <option value="1"> هندسة القوى الميكانيكيه</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>اضافة صورة</label>
+                                <i class="far fa-image"></i>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">اختر ملف</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-orange">تعديل الحساب</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.flipster.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mixitup.js"></script>
+<script src="js/index.js"></script>
+</html>
