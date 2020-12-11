@@ -11,43 +11,12 @@
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="btn brown my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#Quetes">مقتبسات</button>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" style="margin: auto;">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">اخر الانشطة</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                الاعوام الدراسية
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">الكورسات</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60"></a>
-                </div>
-            </nav>
             <div class="main_right">
                 <h1><span>كلية <span class="color">الهندسة</span> جامعة كفر الشيخ</h1>
                 <p>لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
                 <div class="buttons">
                     <button class="btn brown my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#login">تسجيل الدخول</button>
-                    <button class="btn main my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#sign">انشاء حساب</button>
+                    <button class="btn main my-2 my-sm-0"><a href="account_edit.html">انشاء حساب</a></button>
                 </div>
         </div>
     </header>
@@ -163,15 +132,17 @@
     </section>
     <section class="section2 text-right">
         <div class="container">
-            <h2>اخر الاخبار</h2>
+            <div class="row">
+                <h2>اخر الاخبار</h2>
             <p class="main_P">لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية.</p>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-5 order-md-2">
+                        <div class="col-5 order-2">
                             <img src="img/img1.jpg">
                         </div>
-                        <div class="col-md-7 order-md-1">
+                        <div class="col-7 order-1">
                             <div class="main">
                                 <h3>احمد</h3>
                                 <span>مهندس</span>
@@ -184,10 +155,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-5 order-md-2">
+                        <div class="col-5 order-2">
                             <img src="img/img2.jpg">
                         </div>
-                        <div class="col-md-7 order-md-1">
+                        <div class="col-7 order-1">
                             <div class="main">
                                 <h3>عبد الرحمن</h3>
                                 <span>مهندس</span>
@@ -200,12 +171,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <div class="row">
-                        <div class="col-md-5 order-md-2">
+                        <div class="col-5 order-2">
                             <img src="img/img3.jpg">
                         </div>
-                        <div class="col-md-7 order-md-1">
+                        <div class="col-7 order-1">
                             <div class="main">
                                 <h3>هبة</h3>
                                 <span>مهندسه</span>
@@ -218,10 +189,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-5 order-md-2">
+                        <div class="col-5 order-2">
                             <img src="img/img4.jpg">
                         </div>
-                        <div class="col-md-7 order-md-1">
+                        <div class="col-7 order-1">
                             <div class="main">
                                 <h3>اية</h3>
                                 <span>مهندسه</span>
@@ -375,8 +346,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-1"><i class="far fa-eye show-pass"></i></div>
-                                    <div class="col-md-11">
+                                    <div class="col-1"><i class="far fa-eye show-pass"></i></div>
+                                    <div class="col-11">
                                         <label>كلمة المرور</label>
                                         <i class="fas fa-unlock-alt"></i>
                                         <input type="password" class="form-control showpass password_login" required>

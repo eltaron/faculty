@@ -89,6 +89,11 @@ $second_color:  #b79b6d;
         }
     }
 }
+.navbar-light .navbar-toggler {
+    color:  $main_color;
+    border-color: $main_color;
+    margin-top: 17px;
+}
 body{overflow-x: hidden;}
 .mix {display: none;}
 .asterisk{
@@ -127,22 +132,50 @@ header{
     .main_right {
         width: 30%;
         float: right;
-        margin-top: 10%;
+        margin-top: 17%;
         text-align: right;
         margin-right: 40px;
+        @media (max-width: 992px) {
+            width: 82%;
+            float: none;
+            margin: auto;
+            background-color: rgba(183, 155, 109, 0.5);
+            padding: 23px 50px;
+            box-shadow: 1px 1px 2px 0 rgba(70, 68, 64, 0.8);
+            position: relative;
+            top: 175px;
+        }
         h1 {
             @include main_h2;
             .color {
                 color: $second_color;
                 font-size: 56px;
+                @media (max-width: 992px) {
+                    color: #fff;
+                }
             }
         }
         p{
             color:$main_color;
             margin-bottom: 23px;
         }
+        a{
+            color: $main_color;
+            border-radius: 30px;
+            padding: 10px 17px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 3px solid;
+            margin-left: 10px;
+            text-decoration: none;
+            &:hover{
+                border-color: $main_color;
+                color: $second_color;
+                background-color: $main_color;
+                transition: 0.7s ease-in-out;
+            }
+        }
         .brown {@include brown;}
-        .main  {@include main;}
     }
 }
 .section1{
@@ -151,6 +184,7 @@ header{
     h2 {
         @include main_h2;
     }
+    .row{padding-left: 50px;}
     .shuffle{
         li {
             display: inline-block;
@@ -168,6 +202,9 @@ header{
             width: 140px;
             height: 40px;
             line-height: 37px;
+            @media (max-width: 992px) {
+                width: 113px;
+            }
         }
         .select {opacity: 1;}
     }
@@ -176,9 +213,17 @@ header{
             margin-bottom: 20px;
             padding: 0;
             margin-right: 10px;
-            flex: 0 0 24%;
-            max-width: 24%;
-            h3{margin-top: 8px;margin-bottom: 16px;}
+            flex: 0 0 23%;
+            max-width: 23%;
+            @media (max-width: 992px) {
+                flex: 0 0 31%;
+                max-width: 31%;
+            }
+            @media (max-width: 768px) {
+                flex: 0 0 48%;
+                max-width: 48%;
+            }
+            h3{margin-top: 30px;margin-bottom: 16px;}
         }
         .flip-card {
             perspective: 1000px;
@@ -186,7 +231,7 @@ header{
         .flip-card-inner {
             position: relative;
             width: 100%;
-            height: 337px;
+            height: 380px;
             text-align: center;
             transition: transform 0.7s ease-in-out;
             transform-style: preserve-3d;
@@ -237,23 +282,30 @@ header{
 .section2 {
     margin: 20px 0;
     .container{
-        h2{@include main_h2;}
+        h2{margin: auto;@include main_h2;}
         .main_P{
             width: 90%;
             text-align: right;
-            margin-left: 112px;
+            margin: auto;
             margin-bottom: 25px;
             color: $main_color;
         }
         img{width: 100%;height: 240px;}
         .col-md-6{
-            flex: 0 0 48%;
-            max-width: 48%;
+            flex: 0 0 47%;
+            max-width: 47%;
             background-color: #f0f3d6;
             margin-left: 15px;
             padding: 0;
             margin-bottom: 15px;
             box-shadow: 3px 3px 5px 0px #8d8a8a;
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                background-color: #f0f3d6;
+                margin: auto;
+                margin-bottom: 15px;
+            }
             .main{
                 margin-top: 25px;
                 h3{
@@ -265,13 +317,19 @@ header{
             }
             .overlay{
                 position: absolute;
-                top: 144px;
+                top: 120px;
                 right: 0px;
                 background-color: $main_color;
                 opacity: 0.7;
                 color: rgb(241, 245, 190);
                 display: none;
                 p{width: 90%;margin: 12px 0px 12px 22px;}
+                @media (max-width: 992px) {
+                    top: 96px;
+                }
+                @media (max-width: 768px) {
+                    top: 121px;
+                }
             }
             &:hover{.overlay{display: block;transition: 0.7s ease-in-out;}}
         }
@@ -343,8 +401,8 @@ footer{
 }
 /*account_edit*/
 .header{
-    border-bottom: 1px solid #e1e4e8;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #e1e4e8;
+    height: 87px;
     .navbar{
         @include navbar;
         padding-bottom: 0;
@@ -364,6 +422,7 @@ footer{
     }
 }
 .section4{
+    margin-top: 20px;
     h2{
         font-weight: bold;
         color: $main_color;
@@ -379,8 +438,11 @@ footer{
             text-align: center;
             text-align-last: center;
         }
+        .fa-eye{
+            left: 13px;
+        }
     }
-    .col-md-3{
+    .col-lg-3{
         border: 1px solid;
         border-color:#c1b8b8;
         margin-bottom: 20px;
@@ -390,6 +452,9 @@ footer{
             margin-top: 10px;
             font-weight: bold;
             color: $main_color;
+        }
+        @media (max-width: 992px) {
+            border: none;
         }
     }
 }
